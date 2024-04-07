@@ -12,13 +12,13 @@ This repository contains a Docker Compose file for setting up SonarQube with Doc
 1. Clone this repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/sonarqube-docker-compose.git
+    git clone https://github.com/codeboylal/DevSecOps-Projects.git
     ```
 
 2. Navigate to the cloned directory:
 
     ```bash
-    cd sonarqube-docker-compose
+    cd DOCKER
     ```
 
 ## Usage
