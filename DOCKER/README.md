@@ -5,13 +5,13 @@ This repository contains a Docker Compose file for setting up SonarQube with Doc
 ## Prerequisites
 
 - Docker Engine
-    '''bash
+    ```bash
     sudo apt install docker.io -y
-    '''
+    ```
 - Docker Compose
-    '''bash
+    ```bash
     sudo apt install docker-compose-y
-    '''
+    ```
 ## Installation
 
 1. Clone this repository to your local machine:
@@ -37,7 +37,7 @@ docker-compose up -d
 docker ps
 ```
 ```bash
-http://127.0.0.1:9000
+To access SonarQube, visit [http://127.0.0.1:9000](http://127.0.0.1:9000)
 ```
 
 ## Default Credentials
