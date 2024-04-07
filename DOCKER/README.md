@@ -27,8 +27,10 @@ To start SonarQube, run:
 
 ```bash
 docker-compose up -d
-
+```
 ## Default Credentials
+- username: admin
+- password: admin
 
-username: admin
-password: admin
+
+
