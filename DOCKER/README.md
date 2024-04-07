@@ -36,9 +36,7 @@ docker-compose up -d
 ```bash
 docker ps
 ```
-```bash
 To access SonarQube, visit [http://127.0.0.1:9000](http://127.0.0.1:9000)
-```
 
 ## Default Credentials
 - username: admin
