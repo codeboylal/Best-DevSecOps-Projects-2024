@@ -5,8 +5,13 @@ This repository contains a Docker Compose file for setting up SonarQube with Doc
 ## Prerequisites
 
 - Docker Engine
+    '''bash
+    sudo apt install docker.io -y
+    '''
 - Docker Compose
-
+    '''bash
+    sudo apt install docker-compose-y
+    '''
 ## Installation
 
 1. Clone this repository to your local machine:
@@ -28,6 +33,13 @@ To start SonarQube, run:
 ```bash
 docker-compose up -d
 ```
+```bash
+docker ps
+```
+```bash
+http://127.0.0.1:9000
+```
+
 ## Default Credentials
 - username: admin
 - password: admin
