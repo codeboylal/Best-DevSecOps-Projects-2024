@@ -1,0 +1,12 @@
+pipeline {
+    
+    agent any
+
+    stages{
+        stages('Dev'){
+            steps{
+                echo 'This is single stage jenkins pipeline'
+            }
+        }
+    }
+}
