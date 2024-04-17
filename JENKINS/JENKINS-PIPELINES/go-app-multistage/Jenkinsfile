@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Dev') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/codeboylal/Project-5-go-webapp-sample.git'
+            }
+        }
+
+        stage('UAT') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/codeboylal/Project-5-go-webapp-sample.git'
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+pipeline {
+    agent any 
+
+    tools {
+        go 'go'
+    }
+
+    environment {
+        GO111MODULE = 'on'    
+    }   
+
+
+    // Prerequisits:
+    // git install on jenkins server : sudo apt install git
+    // Install build-essential on jenkins: sudo apt install build-essential
+    // Add global tools to go: Dashboard > Manage Jenkins > Tools > Go installations > Install automatically
+
+    stages {
+        stage('Developement') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/codeboylal/Project-5-go-webapp-sample.git'
+                // sh 'go test ./...'  
+            }
+        }
+        // Prerequisits:
+        // Install docker plugins - Docker API, 
+        // Install docker on jenkins: sudo apt install docker.io
+        // Adding current user to docker group: sudo usermod -aG docker $USER 
+        // Adding jenkins user to docker group: sudo usermod -aG docker jenkins
+        // Restart both the jenkins and docker services: sudo systemctl restart docker / jenkins
+
+        stage('Building Docker Image') {
+            steps {
+               script{
+                    app = docker.build("codeboylal/go-web-sample")
+                }
+            }
+        }
+    
+    }
+
+}

@@ -1,0 +1,25 @@
+pipeline {
+    
+    agent any
+
+    stages{
+        stage('Build'){
+            steps{
+                // Get some code from a GitHub repository
+                git 'https://github.com/codeboylal/Project-5-go-webapp-sample.git'
+            }
+        }
+    }
+}
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
