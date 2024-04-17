@@ -23,6 +23,7 @@ pipeline {
                 // sh 'go test ./...'  
             }
         }
+        
         // Prerequisits:
         // Install docker plugins - Docker API, 
         // Install docker on jenkins: sudo apt install docker.io
@@ -37,7 +38,5 @@ pipeline {
                 }
             }
         }
-    
     }
-
 }

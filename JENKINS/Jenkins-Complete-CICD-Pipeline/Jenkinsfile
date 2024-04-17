@@ -1,5 +1,5 @@
 pipeline {
-    agent any 
+    agent any
 
     tools {
         go 'go'
@@ -36,8 +36,8 @@ pipeline {
             }
         }
 
-        stage('Run'){
-            steps{
+        stage('Run') {
+            steps {
                 sh 'cd /var/lib/jenkins/workspace/go-full-pipeline && ./go-webapp-sample &'
             }
         }
@@ -67,20 +67,21 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'go test ./...'  
+                sh 'go test ./...'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'go build .'  
+                sh 'go build .'
             }
         }
 
-         stage('Run'){
-            steps{
+        /* groovylint-disable-next-line DuplicateStringLiteral */
+        stage('Run') {
+            steps {
                 sh 'cd /var/lib/jenkins/workspace/go-full-pipeline'
-                sh 'chmod +x go-webapp-sample' 
+                sh 'chmod +x go-webapp-sample'
                 sh './go-webapp-sample'
             }
         }
