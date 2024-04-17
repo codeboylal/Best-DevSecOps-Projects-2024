@@ -1,0 +1,88 @@
+pipeline {
+    agent any 
+
+    tools {
+        go 'go'
+    }
+
+    environment {
+        GO111MODULES = 'on'    
+    }   
+
+// optional install:     sudo apt-get install daemonize
+
+
+    // Prerequisits:
+    // git install on jenkins server : sudo apt install git
+    // Install build-essential on jenkins: sudo apt install build-essential
+    // Add global tools to go: Dashboard > Manage Jenkins > Tools > Go installations > Install automatically
+
+    stages {
+        stage('Fetch Code From GitHub') {
+            steps {
+                git 'https://github.com/codeboylal/go-webapp-sample.git'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'go test ./...'  
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'go build .'  
+            }
+        }
+
+        stage('Run'){
+            steps{
+                sh 'cd /var/lib/jenkins/workspace/go-full-pipeline && ./go-webapp-sample &'
+            }
+        }
+    }
+}
+
+
+// Revised VersionNumber
+
+pipeline {
+    agent any 
+
+    tools {
+        go 'go'
+    }
+
+    environment {
+        GO111MODULES = 'on'    
+    }   
+
+    stages {
+        stage('Fetch Code') {
+            steps {
+                git 'https://github.com/codeboylal/go-webapp-sample.git'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'go test ./...'  
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'go build .'  
+            }
+        }
+
+         stage('Run'){
+            steps{
+                sh 'cd /var/lib/jenkins/workspace/go-full-pipeline'
+                sh 'chmod +x go-webapp-sample' 
+                sh './go-webapp-sample'
+            }
+        }
+    }
+}
