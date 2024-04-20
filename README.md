@@ -6,16 +6,26 @@ Welcome to our DevSecOps Tutorials Repository! Here, you'll find a comprehensive
 
 ## What's Inside?
 
-1. **Jenkins Tutorials**: Learn how to set up Jenkins for continuous integration and continuous delivery (CI/CD) pipelines.
-2. **Docker Tutorials**: Dive into Docker containerization and deployment strategies for various applications.
-3. **Kubernetes Tutorials**: Explore Kubernetes for orchestrating containerized applications and managing clusters.
-4. **Terraform Guides**: Master infrastructure as code (IaC) with Terraform for provisioning and managing cloud resources.
-5. **Grafana Guides**: Visualize and monitor your systems with Grafana for insightful dashboards and data analysis.
-6. **Nagios Tutorials**: Implement Nagios for comprehensive monitoring and alerting of IT infrastructure.
-7. **Git Tutorials**: Learn version control with Git for efficient collaboration and code management.
-8. **Linux Tutorials**: Dive into Linux system administration for robust and secure server management.
-9. **Networking Tutorials**: Explore networking concepts and configurations for seamless communication between systems.
-10. **SonarQube Guides**: Ensure code quality and security with SonarQube for continuous inspection and analysis.
+1. **Jenkins**: CI/CD pipelines setup.
+2. **Docker**: Containerization and deployment.
+3. **Kubernetes**: Container orchestration.
+4. **Terraform**: Cloud infrastructure as code.
+5. **Grafana**: System visualization and monitoring.
+6. **Nagios**: IT infrastructure monitoring and alerting.
+7. **Git**: Version control for collaboration.
+8. **Linux**: System administration and security.
+9. **Networking**: Seamless communication setup.
+10. **SonarQube**: Continuous code inspection and security.
+11. **Ansible**: Automation of IT tasks.
+12. **Prometheus**: Monitoring and alerting toolkit.
+13. **Chef**: Infrastructure automation framework.
+14. **Splunk**: Data analysis and visualization platform.
+15. **Puppet**: Configuration management tool.
+16. **Elasticsearch**: Distributed search and analytics engine.
+17. **Zabbix**: Enterprise-class open source monitoring solution.
+18. **Vagrant**: Development environment automation.
+19. **Consul**: Service mesh solution for microservices.
+20. **Jira**: Project management and issue tracking.
 
 Explore these tutorials and more to enhance your DevOps skills and build reliable, scalable, and secure systems.
 
