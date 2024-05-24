@@ -8,14 +8,14 @@ pipeline {
     
     stages {
 
-        // Repository Scann
+        // // Repository Scann
 
-        stage ('Repository Scan - Trivy') {
-            steps{
-                echo 'Trivy Repository Scanning'
-                sh 'trivy repo https://github.com/codeboylal/static-website-dashboard.git'
-            }
-        }
+        // stage ('Repository Scan - Trivy') {
+        //     steps{
+        //         echo 'Trivy Repository Scanning'
+        //         sh 'trivy repo https://github.com/codeboylal/static-website-dashboard.git'
+        //     }
+        // }
 
         stage ('Fetch Code - GitHub') {
             steps{
@@ -31,14 +31,14 @@ pipeline {
             }
         }
 
-        stage ('Image Scanning - Trivy') {
-            steps{
-                echo 'Scanning Build Image With Trivy'
-               //  sh 'trivy image lalbudha47/static-web-dashboard'
-               //  sh 'trivy image static-web-dashboard --format=json --output=trivy_image_scan_report.json'
-                sh 'trivy image static-web-dashboard --format=table --output=trivy_image_scan_report_table.txt'
-            }
-        }
+        // stage ('Image Scanning - Trivy') {
+        //     steps{
+        //         echo 'Scanning Build Image With Trivy'
+        //        //  sh 'trivy image lalbudha47/static-web-dashboard'
+        //        //  sh 'trivy image static-web-dashboard --format=json --output=trivy_image_scan_report.json'
+        //         sh 'trivy image static-web-dashboard --format=table --output=trivy_image_scan_report_table.txt'
+        //     }
+        // }
 
     //  // Trivy Generated report upload to AWS S3      
     //     stage('Upload Report - S3') {
