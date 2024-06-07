@@ -22,6 +22,9 @@ sudo apt-get install -y docker-ce
 sudo systemctl enable docker
 sudo systemctl start docker
 
+# Add your user to the Docker group
+sudo usermod -aG docker $USER
+
 # Download Docker Compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
@@ -33,3 +36,7 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 # Verify the installation
 docker-compose --version
+
+# Reboot to apply changes
+echo "Rebooting to apply Docker group changes..."
+sudo reboot
